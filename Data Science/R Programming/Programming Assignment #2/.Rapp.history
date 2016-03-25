@@ -1,0 +1,251 @@
+class(unique_vals$topleft)
+class(unique_vals$text)
+class(unique_vals)
+nxt()
+sapply(unique_vals, length)
+sapply(flags, unique)
+lapply(unique_vals function(elem) elem[2])
+lapply(unique_vals, function(elem) elem[2])
+sapply(flags, unique)
+vapply(flags, unique, numeric(1))
+ok()
+sapply(flags, class)
+vapply(flags, class, character(1))
+?tapply
+table(flags$landmass)
+play()
+flags$landmass
+class(flags$landmass)
+flags
+table(flags$landmass)
+nxt()
+table(flags$animate)
+tapply(flags$animate, flags$landmass, mean)
+tapply(flags$population, flags$red, summary)
+tapply(flags$population, flags$landmass, summary)
+ls()
+class(plants)
+dim(plants)
+nrow(plants)
+ncol(plants)
+object.size(plants)
+name(plants)
+names(plants)
+head(plants)
+head(plants, 10)
+tail(plants)
+tail(plants, 15)
+summary(plants)
+table(plants$Active_Growth_Period)
+str()
+str(plants)
+cube <- function(x, n) {}
+cube <- function(x, n) { x^3 }
+cube(3)
+x <- 1:10
+if(x > 5) { x <- 0 }
+f <- function(x) { g <-function(y) { y+z } z <- 4 x+g(x) }
+f <- function(x) { g <-function(y) { y+z } z <- 4; x + g(x) }
+f <- function(x) {}
+f <- function(x) {
+g <-function(y) {
+y + z }
+z <- 4
+x + g(x)
+}
+z <- 10
+f(3)
+x <- 5
+y <- if(x < 3) {}
+y <- if(x < 3) {
+NA
+} else {
+10 }
+y
+h <- function(x, y = NULL, d = 3L) {
+z <- cbind(x, d)
+if(!is.null(y))
+z <- z + y
+else
+z <- z + f
+g <- x + y / z
+if(d == 3L)
+return(g)
+g < g + 10
+g
+}
+h()
+library("swirl")
+rm(list=ls())
+swirl()
+?sample
+sample(1:6, 4, replace = TRUE)
+sample(1:20, 10)
+LETTERS
+sample(LETTERS)
+flips <- sample(c(0,1), 100, replacement = TRUE, c(0.3,0.7))
+flips <- sample(c(0, 1), 100, replacement = TRUE, c(0.3, 0.7))
+flips <- sample(c(0, 1), 100, replacement = TRUE, c(0.3, 0.7)))
+flips <- sample(c(0, 1), 100, replacement = TRUE, c(0.3, 0.7))
+flips <- sample(c(0, 1), 100, replace = TRUE, c(0.3, 0.7))
+flips
+sum(flips)
+>?rbinom
+rbino?
++
+o
+?rbinom
+rbinom(1, size = 100, prob =#
+| 0.7)
+rbinom(1, size = 100, prob = 0.7)
+flips2 <- rbinom(1, size = 100, prob = 0.7)
+flips2 <- rbinom(100, size = 1, prob = 0.7)
+flips2
+sum(flips2)
+rnorm()
+?rnorm
+rnorm(10)
+rnorm(10, 100, 25)
+rpois(5, 10)
+my_pois <- replicate(100, rpois(5, 10))
+my_pois
+cm <- colMeans(my_pois)
+hist(cm)
+d1 <- Sys.Date()
+class(d1)
+unclass(d1)
+d1
+d2 <- as.Date("1969-01-01")
+unclass(d2)
+t1 <- Sys.time()
+t1
+class(t1)
+unclass(t1)
+t2 <- as.POSIXlt(Sys.time())
+t2
+class(t2)
+t2
+unclass(t2)
+str(unclass(t2))
+t2$min
+play()
+t2
+t2$wday
+t2$zone
+nxt()
+weekdays(d1)
+months(t1)
+quarters(t2)
+t3 <- "October 17, 1986 08:24"
+t4 <- strptime(t3, "%B %d, %Y %H:%M")
+t4
+class(t4)
+Sys.time() > t1
+Sys.time() - t1
+ifftime(Sys.time(), t1, units = 'days')
+difftime(Sys.time(), t1, units = 'days')
+data(cars)
+?cars
+play()
+?data
+nxt()
+head(cars)
+play()
+class(cars)
+nxt()
+plot(cars)
+?plot
+plot(x = cars$speed, y = cars$dist)
+plot(x = cars$dist, y = cars$speed)
+plot(x = cars$dist, y = cars$speed, xlab = "Speed")
+plot(x = cars$speed, y = cars$dist, xlab = "Speed")
+plot(x = cars$speed, y = cars$dist, xlab = "Speed", ylab = "Stopping Distance")
+plot(x = cars$speed, y = cars$dist, ylab = "Stopping Distance")
+plot(x = cars$speed, y = cars$dist, xlab = "Speed", ylab = "Stopping Distance")
+plot(x = cars$speed, y = cars$dist, main = "My Plot")
+plot(cars, main = "My Plot")
+plot(cars, sub = "My Plot Subtitle")
+plot(cars, col = 2)
+plot(cars, xlim = c(10, 15))
+plot(cars, pch = 2)
+data(mtcars)
+?boxplot
+boxplot(mpg ~ cyl, mtcars)
+hist(mtcars$mpg)
+?NULL
+?matrix
+y <- matrix()
+y
+y = c()
+class(y)
+y <- matrix(numeric())
+y
+class(y)
+class(y[1])
+class(y[2])
+class(y[4])
+class(y[4][4])
+class(y[4][4][6])
+class(y[[1]])
+?inverse
+x <- 5
+y <- 5
+identical(x, y)
+setwd("ProgrammingAssignment2")
+source("cachematrix.R")
+makeCacheMatrix()
+makeCacheMatrix()
+makeCacheMatrix()
+source("cachematrix.R")
+makeCacheMatrix()
+source("cachematrix.R")
+makeCacheMatrix()
+cacheSolve()
+c=rbind(c(1, -1/4), c(-1/4, 1))
+c
+solve(c)
+makeCacheMatrix(c)
+y <- makeCacheMatrix(c)
+y$get
+y$get()
+y$getPrevious()
+m <- diag(nrow = 2, ncol = 2)
+m
+solve(m)
+y$set(m)
+y
+y$get()
+y$getPrevious()
+identical(y$get(), y$getPrevious())
+y$set(m)
+y
+y$get()
+y$getPrevious()
+identical(y$get(), y$getPrevious())
+TRUE & FALSE
+TRUE & TRUE
+y
+cacheSolve(y)
+y$get
+y$get()
+source("cachematrix.R")
+y <- makeCacheMatrix(c)
+y$get()
+y$getPrevious()
+y$getInverse()
+cacheSolve(y)
+cacheSolve(y)
+cacheSolve(y)
+y$getPrevious
+y$getPrevious()
+m <- diag(nrow = 2, ncol = 2)
+y$set(m)
+y$get()
+y$getPrevious
+y$getPrevious()
+cacheSolve(y)
+m
+solve(m)
+solve(m)
+solve(m)
+solve(m)
