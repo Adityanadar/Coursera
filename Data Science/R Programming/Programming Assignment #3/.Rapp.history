@@ -1,0 +1,250 @@
+t2
+unclass(t2)
+str(unclass(t2))
+t2$min
+play()
+t2
+t2$wday
+t2$zone
+nxt()
+weekdays(d1)
+months(t1)
+quarters(t2)
+t3 <- "October 17, 1986 08:24"
+t4 <- strptime(t3, "%B %d, %Y %H:%M")
+t4
+class(t4)
+Sys.time() > t1
+Sys.time() - t1
+ifftime(Sys.time(), t1, units = 'days')
+difftime(Sys.time(), t1, units = 'days')
+data(cars)
+?cars
+play()
+?data
+nxt()
+head(cars)
+play()
+class(cars)
+nxt()
+plot(cars)
+?plot
+plot(x = cars$speed, y = cars$dist)
+plot(x = cars$dist, y = cars$speed)
+plot(x = cars$dist, y = cars$speed, xlab = "Speed")
+plot(x = cars$speed, y = cars$dist, xlab = "Speed")
+plot(x = cars$speed, y = cars$dist, xlab = "Speed", ylab = "Stopping Distance")
+plot(x = cars$speed, y = cars$dist, ylab = "Stopping Distance")
+plot(x = cars$speed, y = cars$dist, xlab = "Speed", ylab = "Stopping Distance")
+plot(x = cars$speed, y = cars$dist, main = "My Plot")
+plot(cars, main = "My Plot")
+plot(cars, sub = "My Plot Subtitle")
+plot(cars, col = 2)
+plot(cars, xlim = c(10, 15))
+plot(cars, pch = 2)
+data(mtcars)
+?boxplot
+boxplot(mpg ~ cyl, mtcars)
+hist(mtcars$mpg)
+library(datasets)
+data(iris)
+?iris
+iris["sepal.length"]
+iris["Sepal.ength"]
+iris["Sepal.length"]
+iris("Sepal.length")
+iris[["Sepal.Length"]]
+iris["Sepal.Length"]
+class(iris["Sepal.Length"])
+mean(iris[["Sepal.Length"]])
+?iris
+iris
+iris["virginica"]
+iris[["virginica"]]
+iris[iris$Species == virginica]
+iris[iris$Species == "virginica"]
+iris[iris$Species == "virginica",]
+virginica <- iris[iris$Species == "virginica",]
+virginica
+virginica$Species
+mean(virginica$Sepal.Length)
+virginica$Sepal.Length
+virginica[Sepal.Length]
+virginica["Sepal.Length"]
+virginica$Sepal.Length
+class(virginica$Sepal.Length)
+mean(virginica$Sepal.Length)
+apply(iris[, 1:4],2,mean)
+colMeans(iris)
+apply(iris,2,mean)
+apply(iris,1,mean)
+?apply
+library(datasets)
+data(mtcars)
+?mtcars
+split(mtcars, mtcars$cyl)
+sapply(mtcars, cyl, mean)
+with(mtcars, tapply(mpg, cyl, mean))
+lapply(mtcars, mean)
+with(mtcars, tapply(mpg, cyl, mean))
+?with
+tapply(mpg, cyl, mean)
+?tapply
+x <- with(mtcars, tapply(mpg, cyl, mean))
+x
+abs(x[3] - x[2])
+abs(x[2] - x[3])
+debug(ls)
+ls
+ls()
+e
+quit
+library(datasets)
+data(mtcars)
+with(mtcars, tapply(mpg, cyl, mean))
+mpg
+mean(mtcars[mtcars$cyl == "8",]$hp) - mean(mtcars[mtcars$cyl == "6",]$hp)
+mean(mtcars[mtcars$cyl == "8",]$hp) - mean(mtcars[mtcars$cyl == "4",]$hp)
+tapply(mtcars$cyl, mtcars$mpg, mean)
+sapply(split(mtcars$mpg, mtcars$cyl), mean)
+?split
+split(mtcars$mpg, mtcars$cyl)
+set.seed(1)
+rpois(5, 2)
+?set.seed
+?qpois
+set.seed(10)
+x <- rep(0:1, each = 5)
+e <- rnorm(10, 0, 20)
+y <- 0.5 + 2 * x + e
+y
+?rbinom
+library(datasets)
+Rprof()
+summary.lm()
+summaryRprof()
+y <- 0
+x1 <- 1
+x2 <- 2
+fit <-lm(y ~ x1 + x2)
+Rprof(NULL)
+summaryRprof()
+?system.time
+system.time()
+system.time(y <- 2)
+system.time(y <- x1 + x2)
+system.time(dataset(mtcars))
+system.time(library(datasets))
+setwd("Programming Assignment #3")
+ocm <- read.csv("outcome-of-care-measures.csv", colClasses = "character")
+results <- data.frame(hospitals = as.character(), state = as.character())
+class(results)
+results <- data.frame(hospitals = as.character(), state = as.character(), stringsAsFactors = FALSE)
+class(results[1])
+rbind(results, data.frame("hola", "hi"))
+rbind(results, data.frame(hospitals = "hola", state="hi"))
+rbind(results, data.frame(hospitals = "hola", state = "hi"))
+rbind(results, data.frame(hospitals = "hola", stat = "hi"))
+rbind(results, data.frame(hospitals = "hola", statey = "hi"))
+rbind(results, data.frame(hospitals = "hola", state = "hi"))
+results
+results <- rbind(results, data.frame(hospitals = "hola", state = "hi"))
+results
+results <- data.frame(hospitals = as.character(), state = as.character(), stringsAsFactors = FALSE)
+results <- rbind(results, data.frame(hospitals = "hola", statey = "hi"))
+results
+results <- data.frame(hospitals = as.character(), state = as.character(), stringsAsFactors = FALSE)
+results <- rbind(results, data.frame("hola", "hi"))
+results
+results[nrow(results) + 1, ] <- c( "ted", "hi")
+results <- data.frame(hospitals = as.character(), state = as.character(), stringsAsFactors = FALSE)
+results[nrow(results) + 1, ] <- c( "ted", "hi")
+results
+uniqu_e <- unique(ocm$States)
+unique_e
+uniqu_e
+unique(ocm$States)
+ocm
+head(ocm)
+unique(ocm$State)
+head(ocm[order(ocm$Hospital.Name)],)
+head(ocm[order(ocm[,2])],)
+head(ocm[order(ocm[,2]),])
+head(ocm[order(ocm$Hospital.Name),])
+unique(ocm$States)
+unique(ocm$State)
+unique(ocm$State)[1]
+order(unique(ocm$State))
+sort(unique(ocm$State))
+list_charact = as.character()
+append(list_charact, "Hola")
+list_charact
+append(list_charact, "uola")
+list_charact[1]
+list_charact[4]
+append(list_charact, haha)
+list_charact = character(0)
+append(list_charact, haha)
+append(list_charact, "haha")
+list_charact
+?append
+list_charact <- append(list_charact, "haha")
+list_charact
+list_charact <- append(list_charact, "haha")
+list_charact
+source("rankall.R")
+rankall("heart attack")
+source("rankall.R")
+rankall("heart attack")
+source("rankall.R")
+rankall("heart attack")
+source("rankall.R")
+rankall("heart attack")
+source("rankall.R")
+rankall("heart attack")
+rankall("heart attack", "worst")
+head(rankall("heart attack", 20), 10)
+tail(rankall("pneumonia", "worst"), 3)
+tail(rankall("heart failure"), 10)
+names(ocm)
+source("rankall.R")
+tail(rankall("heart failure"), 10)
+source("rankall.R")
+tail(rankall("heart failure"), 10)
+source("rankall.R")
+tail(rankall("heart failure"), 10)
+source("rankall.R")
+rankall("heart failure")
+source("rankall.R")
+rankall("heart failure")
+source("rankall.R")
+rankall("heart failure")
+rankall("heart attack")
+rankall("heart attack")
+source("rankall.R")
+rankall("heart attack")
+rankall("heart failure")
+source("rankall.R")
+head(rankall("heart attack", 20), 10)
+tail(rankall("pneumonia", "worst"), 3)
+tail(rankall("heart failure"), 10)
+source("http://d396qusza40orc.cloudfront.net/rprog%2Fscripts%2Fsubmitscript3.R")
+submit()
+submit()
+submit()
+submit()
+list_states = sort(unique(ocm$State))
+class(list_states)
+y <- as.character()
+class(y)
+source("rankall.R")
+tail(rankall("pneumonia", "WORST"), 3)
+source("rankall.R")
+tail(rankall("pneumonia", "WORST"), 3)
+tail(rankall("pneumonia", "WORSTy"), 3)
+tail(rankall("pneumonia", TURE), 3)
+tail(rankall("pneumonia", TRUE), 3)
+tail(rankall("pneumonia", 'BEST'), 3)
+source("rankall.R")
+tail(rankall("pneumonia", 'BEST'), 3)
+tail(rankall("pneumonia", 'BEST'), 40)

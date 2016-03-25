@@ -1,0 +1,250 @@
+y
+y <- x$nobs > 100
+y
+x[x$nobs > 100]
+x(x$nobs > 100)
+x(x[["nobs"]] > 100)
+x
+x["nobs"]
+x["nobs"] > 100
+w <- x["nobs"] > 100
+x[w]
+x
+x[w]
+w <- x[["nobs"]] > 100
+x[w]
+x[,w]
+w <- x["nobs"] > 100
+x[,w]
+x[w,]
+y <- complete.cases("specdata")["nobs"] > 100
+y
+y <- complete.cases("specdata")[["nobs"]] > 100
+y <- complete.cases("specdata")
+e <- y[["nob"]] > 100
+e <- y["nob"] > 100
+e
+e <- y["nobs"] > 100
+e
+e <- y["nobs"] > 100
+e <- y[["nobs"]] > 100
+e <- y["nobs"] > 100
+e
+y
+y <- complete("specdata")
+e <- y["nobs"] > 100
+e
+y
+e
+y[,e]
+y[e,]
+y
+y[e,]
+y[e,]["id"]
+y[e,][["id"]]
+vector <- y[e,]
+vector[id]
+vector["id"]
+vector[["id"]]
+for (i in vector[["id"]]) { print(i) }
+my_data <- read.csv("specdata/001.csv")
+my_data["nitrate"]
+my_data["sulfate"]
+class(my_data["nitrate"])
+class(my_data["sulfate"])
+class(my_data[["sulfate"]])
+?cor
+vector
+length(vector)
+nrows(vector)
+nrow(vector)
+source("corr.R")
+source("complete.R")
+cr <- corr("specdata", 150)
+source("corr.R")
+source("complete.R")
+cr <- corr("specdata", 150)
+head(cr)
+my_data
+my_data <- read.csv("specdata/001.csv")
+my_data["sulfate"]
+my_data["sulfate"][!is.na[my_data]]
+my_data["sulfate"][!is.na(my_data["sulfate"])]
+class(my_data["sulfate"][!is.na(my_data["sulfate"])])
+my_data[["sulfate"]][!is.na(my_data["sulfate"])]
+source("corr.R")
+source("complete.R")
+cr <- corr("specdata", 150)
+my_data["sulfate"]
+cor(my_data["nitrate"], my_data["sulfate"])
+cor(my_data[["nitrate"]], my_data[["sulfate"]])
+cor(my_data["nitrate"][!is.na(my_data["nitrate"])], my_data["sulfate"][!is.na(my_data["sulfate"])])
+?co
+?cor
+source("corr.R")
+source("complete.R")
+cr <- corr("specdata", 150)
+head(cr)
+summary(cr)
+cr <- corr("specdata", 400)
+head(cr)
+summary(cr)
+cr <- corr("specdata", 5000)
+summary(cr)
+length(cr)
+source("corr.R")
+source("complete.R")
+cr <- corr("specdata", 5000)
+summary(cr)
+length(cr)
+source("corr.R")
+source("complete.R")
+cr <- corr("specdata", 5000)
+summary(cr)
+length(cr)
+source("corr.R")
+source("complete.R")
+cr <- corr("specdata", 5000)
+summary(cr)
+length(cr)
+cr <- corr("specdata", 400)
+head(cr)
+cr <- corr("specdata")
+summary(cr)
+length(cr)
+source("http://d396qusza40orc.cloudfront.net/rprog%2Fscripts%2Fsubmitscript1.R")
+submit()
+submit()
+submit()
+swirl()
+library("swirl")
+ls()
+rm(list=ls())
+swirl()
+x
+x[1:10]
+x[is.na(x)]
+x[!is.na(x)]
+y <- x[!is.na(x)]
+y
+y[y > 0]
+x[x > 0]
+x[!is.na(x) & x > 0]
+x[c(3,5,7)]
+x[0]
+x[3000]
+x[c(-2,-10)]
+x[-c(2,10)]
+vect <- c(foo = 11, bar = 2, norf = NA)
+vect
+names(vect)
+vect2 <- c(11,2,NA)
+names(vect2) <- c("foo", "bar", "norf")
+identical(vect, vect2)
+vect["bar"]
+vect[c("foo","bar")]
+my_vector <- c(1:20)
+my_vector <- c[1:20]
+info()
+my_vector <- 1:20
+my_vector
+dim(my_vector)
+length(my_vector)
+dim(my_vector) <- c(4, 5)
+dim(my_vector)
+attributes(my_vector)
+my_vector
+class(my_vector)
+my_matrix <- my_vector
+?matrix
+my_matrix2 <- matrix(1:20, 4, 5)
+identical(my_matrix, my_matrix2)
+patients <- c("Bill","Gina","Kelly","Sean")
+cbind(patients,my_matrix)
+my_data <- data.frame(patients,my_matrix)
+my_data
+class(my_data)
+cnames <- c("patients","age","weight","bp","rating","test")
+cnames <- c("patient","age","weight","bp","rating","test")
+colnames(cnames,my_data)
+?colnames
+colnames(my_data) <- cnames
+my_data
+info()
+bye()
+swirl()
+TRUE == TRUE
+(FALSE == FALSE) == FALSE
+(FALSE == TRUE) == FALSE
+6 == 7
+6 < 7
+10 <= 10
+5 != 7
+!(5 == 7)
+FALSE & FALSE
+TRUE & c(TRUE, FALSE, FALSE)
+TRUE && c(TRUE, FALSE, FALSE)
+TRUE | c(TRUE, FALSE, FALSE)
+TRUE || c(TRUE, FALSE, FALSE)
+5 > 8 || 6 != 8 && 4 > 3.9
+isTRUE(6 > 4)
+identical('twins', 'twins')
+xor(5 == 6, !FALSE)
+ints <- sample(10)
+ints
+class(ints)
+ints > 5
+which(ints > 7)
+any(ints < 0)
+all (ints > 0)
+bye()
+swirl()
+Sys.Date()
+mean(c(2,4,5))
+submit()
+boring_function('My first function!')
+boring_function
+submit()
+my_mean(c(4,5,10))
+submit()
+submit()
+submit()
+submit()
+submit()
+submit()
+submit()
+7 %% 4
+7 %% 0
+7 %% 1
+7 %% 1
+submit()
+submit()
+0 %% 1
+0 %% 0
+1 %% 0
+submit()
+remainder(5)
+remainder(11,5)
+remainder(divisor = 11, num = 5)
+remainder(4, div = 2)
+args(remainder)
+submit()
+evaluate(sd, c(1.4,3.6,7.9,8.8))
+evaluate(function(x){x+1}, 6)
+evaluate(function(x) { x[1] }, c(8,4,0))
+evaluate(function(x) { x[3] }, c(8,4,0))
+evaluate(function(x) { x[length(x)] }, c(8,4,0))
+?paste
+paste("Programming", "is", "fun!")
+submit()
+telegram("I'm powerful and beautiful because I have wealth, health and love!")
+submit()
+submit()
+submit()
+mad_libs(place = House, adjective = wondeful, noun = dog)
+mad_libs("House wonderful dog")
+submit()
+submit()
+submit()
+'I' %p% 'love' % 'R!'
+'I' %p% 'love' %p% 'R!'
