@@ -1,0 +1,84 @@
+body {
+	font-family: 'Montserrat', sans-serif;
+	padding-top: 65px;
+	margin: 0;	
+}
+
+.navbar.navbar-custom {
+	background-color: #696969;
+	border: 1px solid black;
+	border-radius: 0;
+	margin-bottom: 0;	
+}
+
+.navbar.navbar-custom .navbar-brand {
+	color: black;	
+}
+
+.navbar.navbar-custom .navbar-collapse {
+	padding: 0;
+	border-color: black;
+}
+
+@media (max-width: 767px){
+	.navbar.navbar-custom .navbar-collapse {
+		background-color: white;
+	}	
+}
+
+.navbar.navbar-custom #nav-list {
+	margin: 0;
+}
+
+.navbar.navbar-custom .navbar-collapse > ul > li {
+	border-bottom: 1px solid black;
+}
+
+.navbar.navbar-custom .navbar-collapse > ul > li:last-child {
+	border: none;
+}
+
+.navbar.navbar-custom .navbar-collapse > ul > li > a {
+	color: black;
+}
+
+.navbar.navbar-custom .navbar-toggle {
+	background: transparent;
+	border-color: #C0C0C0;
+	transition: all ease-out 0.3s;
+}
+
+.navbar.navbar-custom .navbar-toggle .icon-bar {
+	background-color: #C0C0C0;	
+}
+
+.navbar.navbar-custom .navbar-toggle.collapsed {
+	border-color: black;	
+}
+
+.navbar.navbar-custom .navbar-toggle.collapsed .icon-bar {
+	background-color: black;	
+}
+
+.page-title {
+	color: black;
+}
+
+.menu-item {
+	background-color: #696969;
+	color: black;
+	padding: 5px 15px;
+}
+
+.menu-item h4 {
+	margin-top: 0;
+}
+
+.menu-item p {
+	margin: 0;
+}
+
+#chicken, #beef, #sushi {
+	padding-bottom: 15px;
+	padding-top: 15px;
+}
