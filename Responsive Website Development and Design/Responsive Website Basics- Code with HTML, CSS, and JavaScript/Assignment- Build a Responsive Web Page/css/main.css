@@ -1,0 +1,31 @@
+/* ==========================================================================
+   Custom styles
+   ========================================================================== */
+
+.navbar {
+	border: none;
+	margin-bottom: 0;
+}
+
+.img-responsive {
+	margin: 0 auto;
+}
+
+footer {
+	height: 40px;
+}
+
+footer p {
+	margin-bottom: 0;
+}
+
+.travel p {
+	margin: 10px 0;
+}
+
+.jumbotron.first {
+	background: url('../img/travel_background.jpg') no-repeat center center;
+	background-position: center center;
+	background-size: cover;
+	margin-bottom: 0;
+}

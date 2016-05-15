@@ -1,0 +1,33 @@
+/* Applies below 600px */
+h1 {
+	/* Changing text font to Arial */
+	font-family: Arial, sans-serif;
+	/* Changing text letter spacing to -1px */
+	letter-spacing: -1px;
+	/* Aligning text to center */
+	text-align: center;
+}
+
+/* Applies to 600px - 991px */
+@media (min-width: 600px) {
+	h1 {
+		/* Changing text size to 50px */
+		font-size: 50px;
+		/* Changing text letter spacing to 1px */
+		letter-spacing: 1px;
+		/* Changing text color to red */
+		color: red;
+	}
+}
+
+/* Applies to 992px and above */
+@media (min-width: 992px) {
+	h1 {
+		/* Adjusting top padding to 40px */
+		padding-top: 40px;
+		/* Changing text color to blue */
+		color: blue;
+		/* Aligning text to left */
+		text-align: left;
+	}
+}

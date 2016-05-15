@@ -1,0 +1,156 @@
+<!DOCTYPE HTML>
+<html class="no-js" lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>Travel A&A</title>
+		<meta name="description" content="Your vacation of a lifetime in just one click!">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="apple-touch-icon" href="apple-touch-icon.png">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/main.css">
+		<script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+	</head>
+	<body>
+		<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="index.html">Travel A&A</a>
+				</div>
+				<div id="navbar" class="navbar-collapse collapse">
+					<form id="userForm" class="navbar-form navbar-right" role="form">
+						<div class="form-group">
+							<input type="text" placeholder="Email" id="email" class="form-control">
+						</div>
+						<div class="form-group">
+							<input type="password" placeholder="Password" id="password" class="form-control">
+						</div>
+						<button type="submit" class="btn btn-success">Sign in</button>
+					</form>
+				</div><!--/.navbar-collapse -->
+			</div>
+		</nav>
+		<!-- Main jumbotron for a primary marketing message or call to action -->
+		<div class="jumbotron first">
+			<div class="container text-center">
+				<h1>Travel Anywhere & Anytime</h1>
+				<p>Start your journey online. Pick one of our +10,000 travel destinations around the world and make your dreams come true. Soon you'll be off to your Vacation of a Lifetime.</p>
+				<p><a id="inspiration" class="btn btn-primary btn-lg" role="button">Looking for inspiration?</a></p>
+			</div>
+		</div>
+		<div class="jumbotron second">
+			<div class="container text-center">
+				<h1>I wanna go to <span id="myPlace">(...)</span></h1>
+				<div class="row">
+					<div class="form-group">
+						<input type="text" id="place" class="form-control" placeholder="Write a place and click button">
+					</div>
+					<button type="button" id="goPlace" class="btn btn-primary btn-lg">Go!</button>					
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<!-- Example row of columns -->
+			<div class="row">
+				<div class="col-md-4 travel brazil">
+					<h2>Brazil</h2>
+					<img src="img/travel_brazil.jpg" class="img-responsive" alt="Responsive image">
+					<p>Brazilians often say they live in a continent rather than a country. It’s an excusable exaggeration. The landmass is bigger than the United States if you exclude Alaska; the journey from Recife in the east to the western border with Peru is longer than that from London to Moscow.</p>
+					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalBrazil">Learn more</button>
+				</div>
+				<div class="col-md-4 travel mexico">
+					<h2>Mexico</h2>
+					<img src="img/travel_mexico.jpg" class="img-responsive" alt="Responsive image">
+					<p>One of the world's great civilizations, Mexico is a melange of Mesoamerican cultures and modern indigenous tribes, Spanish traditions and a vibrant modern economy, the biggest in Latin America after Brazil.</p>
+					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalMexico">Learn more</button>
+				</div>
+				<div class="col-md-4 travel guatemala">
+					<h2>Guatemala</h2>
+					<img src="img/travel_guatemala.jpg" class="img-responsive" alt="Responsive image">
+					<p>Spanning a mountainous slice of Central America immediately south of Mexico, Guatemala is loaded with incredible natural, historical and cultural appeal. As the birthplace and heartland of the ancient Maya, the country is in many ways defined by the legacy of this early civilization.</p>
+					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalGuatemala">Learn more</button>
+				</div>
+			</div>
+			<hr>
+		</div> <!-- /container -->
+		<footer>
+			<div class="container">
+				<p>&copy; Travel A&A 2016</p>
+			</div>
+		</footer>
+		<!-- Modal -->
+		<div class="modal fade" id="modalBrazil" tabindex="-1" role="dialog" aria-labelledby="myModalBrazil">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="myModalBrazil">Travel to Brazil!</h4>
+					</div>
+					<div class="modal-body">
+						Brazilians often say they live in a continent rather than a country. It's an excusable exaggeration. The landmass is bigger than the United States if you exclude Alaska; the journey from Recife in the east to the western border with Peru is longer than that from London to Moscow, and the distance between the northern and southern borders is about the same as that between New York and Los Angeles.
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade" id="modalMexico" tabindex="-1" role="dialog" aria-labelledby="myModalMexico">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="myModalMexico">Travel to Mexico!</h4>
+					</div>
+					<div class="modal-body">
+						One of the world’s great civilizations, Mexico is a melange of Mesoamerican cultures and modern indigenous tribes, Spanish traditions and a vibrant modern economy, the biggest in Latin America after Brazil. Mexico's landscapes are just as diverse, from the shimmering blue coastline of Baja California and the iconic cactus-strewn deserts of the north, to the Mayan villages and gorgeous palm-smothered beaches of the south.
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade" id="modalGuatemala" tabindex="-1" role="dialog" aria-labelledby="myModalGuatemala">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="myModalGuatemala">Travel to Guatemala!</h4>
+					</div>
+					<div class="modal-body">
+						Spanning a mountainous slice of Central America immediately south of Mexico, Guatemala is loaded with incredible natural, historical and cultural appeal. As the birthplace and heartland of the ancient Maya, the country is in many ways defined by the legacy of this early civilization. Their rainforest cities were abandoned centuries ago, but Maya people continue to thrive in the Guatemalan highlands, where traditions and religious rituals, mingled with Catholic practices, endure to form the richest and most distinctive indigenous identity in the hemisphere.
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade" id="modalWelcome" tabindex="-1" role="dialog" aria-labelledby="myModalWelcome">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="myModalWelcome">Welcome to Travel A&A</h4>
+					</div>
+					<div class="modal-body">
+						In this website you can explore some travel destinations and learn more about them clicking on the "Learn more" button. You can also click on other buttons (Go! / Sign in / Looking for inspiration?) and see some interactivity with JavaScript. Have fun!
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="js/vendor/jquery-1.11.2.min.js"></script>
+		<script src="js/vendor/bootstrap.min.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>
