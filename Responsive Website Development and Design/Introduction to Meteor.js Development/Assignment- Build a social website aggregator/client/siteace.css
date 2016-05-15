@@ -1,0 +1,110 @@
+/* CSS declarations go here */
+.hidden_div{
+	display:none;
+}
+
+html {
+	position: relative;
+	min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+
+.container.main {
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+.sign-in-title {
+	margin: 10px 0;
+}
+
+.back-link {
+	font-size: 15px;
+}
+
+.navbar {
+	margin-bottom: 0;
+}
+
+.panel.website-item.details {
+	margin-top: 20px;
+}
+
+.panel.website-item .panel-heading, .panel.website-item .panel-footer {
+	overflow: hidden;
+	width: 100%;
+}
+
+.panel.website-item .panel-heading > a, .panel.website-item .panel-footer > .website-date {
+	float: left;
+}
+
+.panel.website-item .panel-heading > .votes-badges, .panel.website-item .panel-heading > .website-date, .panel.website-item .panel-footer > .vote-buttons {
+	float: right;
+}
+
+.js-save-website-form {
+	margin-top: 20px;	
+}
+
+#websearch {
+	padding-top: 15px;	
+}
+
+#comment_list {
+	margin-bottom: 0;
+}
+
+#comment_list li:last-child blockquote {
+	margin-bottom: 0;
+}
+
+#form_comments textarea{
+	resize: vertical;
+	min-height: 90px;
+}
+
+.panel-title {
+	margin-right: 10px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #f5f5f5;
+}
+
+.footer .container .text-muted {
+	margin: 20px 0;
+}
+
+@media (min-width: 768px) {
+	#login-dropdown-list {
+		right: 5px;
+		left: initial;	
+	}
+	.navbar {
+		border-radius: 0 !important;
+	}
+}
+
+@media (max-width: 767px) {
+	.accounts-dialog {
+		margin: 0 !important;
+	}
+	#login-buttons {
+		display: inline-table !important;
+	}
+	#login-dropdown-list {
+		position: relative !important;
+		top: auto !important;
+		left: auto !important;
+	}
+}
