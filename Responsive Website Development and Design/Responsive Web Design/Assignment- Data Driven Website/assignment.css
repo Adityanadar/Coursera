@@ -1,0 +1,47 @@
+/* put your css code here */
+
+.page-header {
+	margin-top: 0;
+}
+
+.navbar {
+	margin-bottom: 0;
+}
+
+#main {
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+h1.title {
+	margin-top: 0;
+}
+
+.img-responsive {
+	margin: 0 auto;
+}
+
+.row.animal {
+	margin-bottom: 50px;
+}
+
+.row.animal:last-child {
+	margin-bottom: 0;
+}
+
+.footer {
+	position: relative;
+    width: 100%;
+    height: 60px;
+    background-color: #f5f5f5;	
+}
+
+.footer > .container .text-muted {
+	margin: 20px 0;
+}
+
+@media (min-width: 992px) {
+	h2 {
+		margin-top: 0;
+	}
+}

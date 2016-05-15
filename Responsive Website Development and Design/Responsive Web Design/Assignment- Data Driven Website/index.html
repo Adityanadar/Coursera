@@ -1,0 +1,73 @@
+<!-- This is a first example of using a template -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- include our libraries and css files -->
+		<script src="js/jquery-2.1.4.min.js"></script>
+		<script src="js/handlebars-v3.0.3.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="AnimalsData.js"></script>
+		<script src="assignment.js"></script>
+		<title>Animals</title>		
+		<link href="css/bootstrap.css" rel="stylesheet">
+		<link href="assignment.css" rel="stylesheet">	
+	</head>
+	<body>
+		<nav class="navbar navbar-default navbar-static-top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="index.html">Animals</a>
+				</div>
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				</div>
+			</div>
+		</nav>
+		<div id="main" class="container tab-content">
+		</div>
+		<footer class="footer">
+			<div class="container">
+				<p class="text-muted">Copyright &copy; 2016 Animals</p>
+			</div>
+		</footer>
+
+		<!-- template for navbar tabs -->	
+		<script id="animal-tabs" type="text/x-handlebars-template">
+			<ul class="nav navbar-nav" role="tablist">
+				{{#each category}}
+				<li role="presentation" {{#if @first}}class="active"{{/if}}><a href="#{{toLowerCase name}}" aria-controls="{{toLowerCase name}}" role="tab" data-toggle="tab">{{name}}</a></li>
+				{{/each}}
+			</ul>
+		</script>
+	
+		<!-- template for displaying each category -->
+		<script id="animal-template" type="text/x-handlebars-template">
+			{{#each category}}
+			<div role="tabpanel" class="tab-pane {{#if @first}}active{{/if}}" id="{{toLowerCase name}}">
+				<div class="page-header">
+					<h1 class="title">{{name}}</h1>
+				</div>
+				{{#each animals}}
+				<div class="row animal">
+					<div class="col-md-4">
+						<img class="img-responsive" src="{{image1}}" hover-src="{{image2}}" alt="animal">
+					</div>
+					<div class="col-md-8">
+						<h2>{{name}}</h2>
+						<p>{{description}}</p>
+					</div>
+				</div>
+				{{/each}}
+			</div>
+			{{/each}}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,7 @@
+.no-border {
+	border-bottom: none;
+}
+
+.container.main {
+	padding-bottom: 30px;
+}
