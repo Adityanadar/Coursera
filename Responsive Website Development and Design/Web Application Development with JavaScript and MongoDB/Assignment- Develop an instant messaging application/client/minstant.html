@@ -1,0 +1,123 @@
+<head>
+	<title>minstant!</title>
+</head>
+
+<body>
+</body>
+
+<!-- This is the main template used by iron:router to build the page -->
+<template name="ApplicationLayout">
+	{{> yield "header"}}
+	
+	<div class="container">
+	{{> yield "main"}}
+	</div>
+</template>
+
+<!-- Top level template for the nav bar -->
+<template name="navbar">
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="/">minstant!</a>
+			</div>
+			<div class="nav navbar-nav">
+				{{> loginButtons}}
+			</div>
+		</div>
+	</nav>
+</template>
+
+<!-- Top level template for the lobby page -->
+<template name="lobby_page">
+	{{> available_user_list}}
+</template>
+
+<!-- Display a list of users -->
+<template name="available_user_list">
+	<h2>Choose someone to chat with:</h2>
+	<div class="row">
+	{{#each users}}
+		{{> available_user}}
+	{{/each}}
+	</div>
+</template>
+
+<!-- Display info messages -->
+<template name="info_messages">
+	<h2>{{message}}</h2>	
+</template>
+
+<!-- Display an individual user -->
+<template name="available_user">
+	<div class="col-md-2">
+		<div class="user_avatar">
+			{{#if isMyUser _id}} 
+			<div class="bg-success">{{getUsername _id}} (YOU)
+				<br/>
+				<img src="/{{profile.avatar}}" class="avatar_img">			
+			</div>
+			{{else}}
+			<a href="/chat/{{_id}}">
+				{{getUsername _id}}
+				<br/>
+				<img src="/{{profile.avatar}}" class="avatar_img">
+			</a>
+			{{/if}}
+		</div>
+	</div>
+</template>
+
+<!-- Top level template for the chat page -->
+<template name="chat_page">
+	<h2>Type in the box below to send a message! You can use emoticons!</h2>
+	<div class="row">
+		<div class="col-md-12">
+			<div class="well well-lg">
+				<ul class="chat">
+					{{#each messages}}
+						<li class="{{#if isMainUser}}left{{else}}right{{/if}} clearfix">
+							<span class="chat-img {{#if isMainUser}}pull-left{{else}}pull-right{{/if}}">
+	                            <img src="/{{user.avatar}}" alt="User Avatar" class="img-circle" />
+	                        </span>
+
+                            <div class="chat-body clearfix">
+                                <div class="header">
+	                                {{#if isMainUser}}
+	                                <strong class="primary-font">{{user.username}}</strong>
+	                                <small class="text-muted pull-right">
+	                                	<span class="glyphicon glyphicon-time"></span>{{instantFromNow}}
+	                                </small>                                
+	                                {{else}}
+	                                <small class="text-muted">
+	                                	<span class="glyphicon glyphicon-time"></span>{{instantFromNow}}
+	                                </small>
+	                                <strong class="primary-font pull-right">{{user.username}}</strong>	                                
+	                                {{/if}}
+                                </div>
+								<p>{{{emojiMessage}}}</p>
+                            </div>
+						</li>
+					{{/each}}
+				</ul>
+			</div>	
+		</div>
+	</div>
+    <div class="row">
+		<div class="col-md-12">
+			<form class="form-horizontal js-send-chat">
+				<div class="form-group">
+					<label for="message" class="col-sm-2 control-label">Message</label>
+					<div class="col-sm-10">
+						<textarea class="form-control message" rows="5" name="chat" placeholder="Type your message here..." required></textarea>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-10 col-sm-offset-2">
+						<input id="submit" name="submit" type="submit" value="Send" class="btn btn-primary">
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</template>
