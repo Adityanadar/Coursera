@@ -46,7 +46,7 @@ angular.module('conFusion', ['ionic', 'conFusion.controllers', 'conFusion.servic
     url: '/aboutus',
     views: {
       'mainContent': {
-        templateUrl: 'templates/aboutus1.html',
+        templateUrl: 'templates/aboutus.html',
         controller: 'AboutController'
       }
     }
@@ -56,7 +56,7 @@ angular.module('conFusion', ['ionic', 'conFusion.controllers', 'conFusion.servic
     url: '/contactus',
     views: {
       'mainContent': {
-        templateUrl: 'templates/contactus1.html'
+        templateUrl: 'templates/contactus.html'
       }
     }
   })
