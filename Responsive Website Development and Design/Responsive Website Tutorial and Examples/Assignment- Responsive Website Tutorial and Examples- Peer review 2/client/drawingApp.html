@@ -1,0 +1,93 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Drawing App 2016">
+    <meta name="author" content="Juan Pablo Pinto">
+	<title>Drawing App 2016</title>
+</head>
+
+<body>
+	<div class="jumbotron">
+		<div class="container">
+			<h1>Welcome to Drawing App 2016!</h1>
+			<p>Draw whatever you like! Below you will find a set of 21 colors, three set of control buttons (Thickness, Opacity and Linecap) and two special buttons (Clear and Save).</p>
+			<p><strong>Thickness</strong> changes the line's stroke width.</p>
+			<p><strong>Opacity</strong> changes the line's opacity.</p>
+			<p><strong>Linecap</strong> changes the line's shape of the ends.</p>
+			<p><strong>Clear</strong> clears the canvas.</p>
+			<p><strong>Save</strong> exports your current canvas drawing to a PNG image (canvas.png).</p>
+			<p>Enjoy!</p>
+		</div>
+	</div>
+	<div class="container wall">
+		{{> wall}}
+	</div>
+</body>
+
+<template name="wall">
+	<div class="row">
+		<div class="controls">
+			<div class="option">
+				<h4>Thickness</h4>
+				<div class="btn-group">
+					<a class="btn btn-success btn-sm thicker-button">+</a>
+					<a class="btn btn-danger btn-sm thinner-button">-</a>
+				</div>
+			</div>						
+			<div class="option">
+				<h4>Opacity</h4>
+				<div class="btn-group">
+					<a class="btn btn-success btn-sm more-opacity-button">+</a>
+					<a class="btn btn-danger btn-sm less-opacity-button">-</a>
+				</div>
+			</div>
+			<div class="option">
+				<h4>Linecap</h4>
+				<div class="btn-group">
+					<a class="btn btn-primary btn-sm linecap-round-button">Round</a>
+					<a class="btn btn-primary btn-sm linecap-square-button">Square</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-3 col-sm-1 button-column">
+			<button class="clear-button">Clear</button>
+		</div>
+		<div class="col-xs-3 col-sm-1 button-column">
+			<button class="save-button">Save</button>
+		</div>
+		{{> colorButton color="red"}}		
+		{{> colorButton color="blue"}}
+		{{> colorButton color="green"}}
+		{{> colorButton color="black"}}
+		{{> colorButton color="white"}}				
+		{{> colorButton color="purple"}}		
+		{{> colorButton color="orange"}}
+		{{> colorButton color="pink"}}
+		{{> colorButton color="magenta"}}
+		{{> colorButton color="cyan"}}
+		{{> colorButton color="yellow"}}		
+		{{> colorButton color="brown"}}
+		{{> colorButton color="gray"}}
+		{{> colorButton color="olive"}}
+		{{> colorButton color="crimson"}}		
+		{{> colorButton color="fuchsia"}}		
+		{{> colorButton color="salmon"}}
+		{{> colorButton color="lime"}}
+		{{> colorButton color="teal"}}
+		{{> colorButton color="tomato"}}
+		{{> colorButton color="turquoise"}}
+	</div>
+	<div class="row">
+		{{> canvas}}
+	</div>
+</template>
+
+<template name="canvas">
+  <div id='canvas'></div>
+</template>
+
+<template name="colorButton">
+	<div class="col-xs-3 col-sm-1 button-column">
+		<button class="color-button" data-color="{{color}}"></button>
+	</div>
+</template>

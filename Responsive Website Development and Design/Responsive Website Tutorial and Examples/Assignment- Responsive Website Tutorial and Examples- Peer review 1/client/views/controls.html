@@ -1,0 +1,13 @@
+<template name="controls">
+    <ul class="nav navmenu-nav">
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{capitalize instrument}} <b class="caret"></b></a>
+            <ul class="dropdown-menu navmenu-nav">
+                <li class="button-control"><button type="button" class="btn btn-success raised play" data-instrument="{{instrument}}">ON</button></li>
+                <li class="button-control"><button type="button" class="btn btn-danger raised stop" data-instrument="{{instrument}}">OFF</button></li> 
+                <li class="slider-control">Speed<div class="speed-slider" data-instrument="{{instrument}}"></div></li>
+                <li class="slider-control">Volume<div class="volume-slider" data-instrument="{{instrument}}"></div></li>
+            </ul>
+        </li>
+    </ul>
+</template>

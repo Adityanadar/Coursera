@@ -1,0 +1,191 @@
+html, body {
+  height: 100%;
+}
+body {
+  padding: 50px 0 0 0;
+}
+
+.navmenu {
+  padding-top: 50px;
+}
+
+.navbar {
+  display: block;
+  text-align: center;
+}
+.navbar-brand {
+  display: inline-block;
+  float: none;
+}
+.navbar-toggle {
+  position: absolute;
+  float: left;
+  margin-left: 15px;
+}
+
+.container {
+  max-width: 100%;
+}
+
+@media (min-width: 1px) {
+  .navbar-toggle {
+    display: block !important;
+  }
+}
+
+@media (min-width: 992px) {
+  body {
+    padding: 0 0 0 300px;
+  }
+  .navmenu {
+    padding-top: 0;
+  }
+  .navbar {
+    display: none !important; /* IE8 fix */
+  }
+}
+
+
+
+ul.dropdown-menu {
+    text-align: center;
+    padding: 0 15px 10px 15px;
+}
+
+ul.dropdown-menu > li.button-control {
+    display: inline-block;
+}
+
+ul.dropdown-menu > li.slider-control {
+    padding-top: 10px;
+}
+
+.figure {
+	text-align: center;
+	padding: 20px 0;
+}
+
+.figure .figure-img {
+	max-width: 100%;
+}
+
+.figure .figure-caption .badge {
+	padding: 6px 18px;
+}
+
+.figure .figure-caption ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+.figure .figure-caption li {
+	display: inline-block;
+	margin-bottom: 5px;
+}
+
+.badge.status-1 {
+	background: #00bf6f;
+}
+
+.badge.status-0 {
+	background: #f25454;
+}
+
+h2.badge {
+	font-size: 20px;
+	padding: 10px 20px;
+}
+
+/******************************************************
+	CUSTOM BTN VALUES
+******************************************************/
+
+.btn {
+	padding: 14px 24px;
+	border: 0 none;
+	font-weight: 700;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+.btn:focus, .btn:active:focus, .btn.active:focus {
+	outline: 0 none;
+}
+
+/******************************************************
+	STANDARD BUTTONS
+******************************************************/
+
+.btn-primary {
+	background: #0099cc;
+	color: #ffffff;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+	background: #33a6cc;
+}
+
+.btn-primary:active, .btn-primary.active {
+	background: #007299;
+	box-shadow: none;
+}
+
+.btn-success {
+	background: #00bf6f;
+	color: #ffffff;
+}
+
+.btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success.active, .open > .dropdown-toggle.btn-success {
+	background: #39bf87;
+}
+
+.btn-danger {
+	background: #f25454;
+	color: #ffffff;
+}
+
+.btn-danger:hover, .btn-danger:focus, .btn-danger:active, .btn-danger.active, .open > .dropdown-toggle.btn-danger {
+	background: #f26d6d;
+}
+
+.btn-danger:active, .btn-danger.active {
+	background: #bf4343;
+	box-shadow: none;
+}
+
+/******************************************************
+	RAISED BUTTONS
+******************************************************/
+
+.btn-primary.raised {
+	box-shadow: 0 3px 0 0 #007299;
+}
+
+.btn-primary.raised:active, .btn-primary.raised.active {
+	background: #33a6cc;
+	box-shadow: none;
+	margin-bottom: -3px;
+	margin-top: 3px;
+}
+
+.btn-success.raised {
+	box-shadow: 0 3px 0 0 #008c52;
+}
+
+.btn-success.raised:active, .btn-success.raised.active {
+	background: #39bf87;
+	box-shadow: none;
+	margin-bottom: -3px;
+	margin-top: 3px;
+}
+
+.btn-danger.raised {
+	box-shadow: 0 3px 0 0 #bf4343;
+}
+
+.btn-danger.raised:active, .btn-danger.raised.active {
+	background: #f26d6d;
+	box-shadow: none;
+	margin-bottom: -3px;
+	margin-top: 3px;
+}

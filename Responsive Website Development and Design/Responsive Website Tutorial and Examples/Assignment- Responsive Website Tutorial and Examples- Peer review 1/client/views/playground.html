@@ -1,0 +1,29 @@
+<template name="playground">
+    <h2 class="badge status-{{startdac}}">Music Machine</h2>
+	<div class="row">
+		{{> playgroundItem name="drums" image="drums"}}
+		{{> playgroundItem name="bassline" image="bass"}}
+		{{> playgroundItem name="bassline24bit" image="bass"}}
+		{{> playgroundItem name="bassline32bit" image="bass"}}				
+		{{> playgroundItem name="arp" image="arp"}}
+		{{> playgroundItem name="hihat" image="hihat"}}
+		{{> playgroundItem name="snaredrum" image="snaredrum"}}				
+		{{> playgroundItem name="cymbal" image="cymbal"}}
+	</div>
+</template>
+
+<template name="playgroundItem">
+	<div class="col-sm-6 col-md-3">
+		<figure class="figure">
+			<h3>{{capitalize name}}</h3>
+			<img src="images/{{image}}.jpg" class="figure-img img-fluid img-rounded" alt="{{name}}">
+			<figcaption class="figure-caption">
+				<ul>
+					<li><span class="badge status-{{instrument name}}">Status</span></li>
+					<li><span class="badge">Speed: {{sliderSpeed name}}</span></li>
+					<li><span class="badge">Volume: {{sliderVolume name}}</span></li>
+				</ul>
+			</figcaption>
+		</figure>			
+	</div>
+</template>
