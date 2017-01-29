@@ -16,16 +16,19 @@
     </ion-header-bar>
     <ion-content>
       <ion-list>
-        <ion-item menu-close href="#/app/home">
+        <ion-item menu-close ui-sref="app.home">
           Home
         </ion-item>
-        <ion-item menu-close href="#/app/aboutus">
+        <ion-item menu-close ui-sref="app.aboutus">
           About Us
         </ion-item>
-        <ion-item menu-close href="#/app/menu">
+        <ion-item menu-close ui-sref="app.menu">
           Menu
         </ion-item>
-        <ion-item menu-close href="#/app/contactus">
+        <ion-item menu-close ui-sref="app.favorites">
+          My Favorites
+        </ion-item>
+        <ion-item menu-close ui-sref="app.contactus">
           Contact Us
         </ion-item>
         <ion-item class="item-divider">
@@ -37,6 +40,9 @@
         <ion-item menu-close ng-click="reserve()">
           Reserve Table
         </ion-item>
+        <ion-item menu-close ng-click="register()">
+          Register
+        </ion-item>        
       </ion-list>
     </ion-content>
   </ion-side-menu>

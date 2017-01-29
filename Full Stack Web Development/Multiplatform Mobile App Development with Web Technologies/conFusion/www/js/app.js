@@ -4,22 +4,44 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('conFusion', ['ionic', 'conFusion.controllers', 'conFusion.services'])
+angular.module('conFusion', ['ionic', 'ngCordova', 'conFusion.controllers', 'conFusion.services'])
 
-.run(function($ionicPlatform) {
+.run(function($ionicPlatform, $rootScope, $ionicLoading, $cordovaSplashscreen, $timeout) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
     if (window.cordova && window.cordova.plugins.Keyboard) {
       cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
       cordova.plugins.Keyboard.disableScroll(true);
-
     }
+    
     if (window.StatusBar) {
       // org.apache.cordova.statusbar required
       StatusBar.styleDefault();
     }
+
+    $timeout(function() {
+	    $cordovaSplashscreen.hide();
+    }, 10000);
   });
+ 
+	$rootScope.$on('loading:show', function() {
+		$ionicLoading.show({
+			template: '<ion-spinner></ion-spinner><br>Loading ...'
+		})
+	});
+	
+	$rootScope.$on('loading:hide', function() {
+		$ionicLoading.hide();
+	});
+	
+	$rootScope.$on('$stateChangeStart', function() {
+		$rootScope.$broadcast('loading:show');
+	});
+	
+	$rootScope.$on('$stateChangeSuccess', function() {
+		$rootScope.$broadcast('loading:hide');
+	});
 })
 
 .config(function($stateProvider, $urlRouterProvider) {
@@ -37,7 +59,18 @@ angular.module('conFusion', ['ionic', 'conFusion.controllers', 'conFusion.servic
     views: {
       'mainContent': {
         templateUrl: 'templates/home.html',
-        'controller': 'IndexController'
+        controller: 'IndexController',
+				resolve: {
+					dish: function(menuFactory) {
+						return menuFactory.get({id:0});
+					},
+					promotion: function(promotionFactory) {
+						return promotionFactory.get({id:0});
+					},
+					leader: function(corporateFactory) {
+						return corporateFactory.get({id:3});
+					}
+				}        
       }
     }
   })
@@ -47,7 +80,12 @@ angular.module('conFusion', ['ionic', 'conFusion.controllers', 'conFusion.servic
     views: {
       'mainContent': {
         templateUrl: 'templates/aboutus.html',
-        controller: 'AboutController'
+        controller: 'AboutController',
+ 				resolve: {
+					leaders: function(corporateFactory) {
+						return corporateFactory.query();
+					}
+				}
       }
     }
   })
@@ -66,7 +104,12 @@ angular.module('conFusion', ['ionic', 'conFusion.controllers', 'conFusion.servic
     views: {
       'mainContent': {
         templateUrl: 'templates/menu.html',
-        controller: 'MenuController'
+        controller: 'MenuController',
+        resolve: {
+					dishes: function(menuFactory) {
+						return menuFactory.query();
+					}
+        }
       }
     }
   })
@@ -76,10 +119,34 @@ angular.module('conFusion', ['ionic', 'conFusion.controllers', 'conFusion.servic
     views: {
       'mainContent': {
         templateUrl: 'templates/dishdetail.html',
-        controller: 'DishDetailController'
+        controller: 'DishDetailController',
+        resolve: {
+					dish: function($stateParams, menuFactory) {
+						return menuFactory.get({id:parseInt($stateParams.id, 10)});
+					}
+        }
+      }
+    }
+  })
+
+  .state('app.favorites', {
+    url: '/favorites',
+    views: {
+      'mainContent': {
+        templateUrl: 'templates/favorites.html',
+        controller:'FavoritesController',
+				resolve: {
+					dishes: function(menuFactory) {
+						return menuFactory.query();
+					},
+					favorites: function(favoriteFactory) {
+						return favoriteFactory.getFavorites();
+					}
+				}        
       }
     }
   });
+    
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/home');
 });

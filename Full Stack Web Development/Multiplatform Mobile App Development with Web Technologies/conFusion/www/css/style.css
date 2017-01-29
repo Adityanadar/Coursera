@@ -1,1 +1,8 @@
 /* Empty. Add your own CSS if you like */
+.popover {
+  height: 120px;
+}
+
+textarea {
+  resize: none;
+}
