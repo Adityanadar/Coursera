@@ -1,1 +1,1 @@
-# Capstone Demo Application
+# Capstone Assignment: Core API Development and Deployment
